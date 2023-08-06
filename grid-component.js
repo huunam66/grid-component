@@ -67,14 +67,13 @@ function add_show_related_post() {
       aside.classList.add("ani-show-related-post");
       show_related_post.classList.remove("show-related-post");
       show_related_post.classList.add("close-related-post");
-      count++;
     } else {
       aside.classList.remove("ani-show-related-post");
       aside.classList.add("ani-close-related-post");
       show_related_post.classList.remove("close-related-post");
       show_related_post.classList.add("show-related-post");
-      count++;
     }
+    count++;
   });
 }
 
