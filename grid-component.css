@@ -219,7 +219,7 @@ footer{
   aside{
     position: fixed;
     top: 100px;
-    right: -94%;
+    right: -400px;
   }
 
   article{
@@ -231,7 +231,7 @@ footer{
   }
 
   .related-post{
-    width: 94%;
+    width: 100%;
   }
 }
 
@@ -314,7 +314,7 @@ footer{
 
 @keyframes ani-show-related-post{
   0%{
-    right: -94%;
+    right: -400px;
   }
   100%{
     right: 0;
@@ -326,7 +326,7 @@ footer{
     right: 0;
   }
   100%{
-    right: -94%;
+    right: -400px;
   }
 }
 
