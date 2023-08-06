@@ -314,7 +314,7 @@ footer{
 
 @keyframes ani-show-related-post{
   0%{
-    right: -400px;
+    right: -350px;
   }
   100%{
     right: 0;
