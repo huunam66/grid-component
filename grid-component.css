@@ -206,7 +206,7 @@ footer{
   aside{
     position: fixed;
     top: 200px;
-    right: -385px;
+    right: -400px;
   }
 
   article{
@@ -238,7 +238,7 @@ footer{
   }
   
   .h1-article-header{
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 
