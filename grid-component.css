@@ -1,0 +1,300 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 50px;
+  border-top: 10px solid #0e819a;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+header{
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border-radius: 0 0 10px 10px;
+}
+
+.left-header{
+  display: flex;
+  align-items: center;
+}
+
+.icon-top-header-left{
+  width: 40px;
+  height: 40px;
+}
+
+.h1-header-left{
+  text-transform: uppercase;
+  color: #0e819a;
+  font-size: 28px;
+  padding-left: 15px;
+}
+
+.nav-list{
+  list-style: none;
+  display: flex;
+}
+
+.nav-item{
+  padding: 0 10px;
+}
+
+.nav-link{
+  text-decoration: none;
+  color: #0e819a;
+  font-size: 24px;
+}
+
+
+.nav-link:hover{
+  text-decoration: underline;
+  background-color: #0e819a;
+  color: #fff;
+}
+
+article .header{
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.h1-article-header{
+  font-size: 38px;
+  color: #0e819a;
+  padding-right: 70px;
+}
+
+article .header::before{
+  content: "TOP";
+  padding: 5px 10px;
+  background-color: #e0d90d;
+  color: #333;
+  position: absolute;
+  font-size: 18px;
+  top: 0;
+  right: -15px;
+  font-weight: bold;
+}
+
+.top-avt{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.avt-user{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.post-by{
+  font-size: 18px;
+  font-style: italic;
+  padding-left: 15px;
+}
+
+.picture-post{
+  width: 100%;
+  height: auto;
+}
+
+.p1, .p2{
+  font-size: 20px;
+  padding-top: 20px;
+  text-indent: 40px;
+  text-align: justify;
+  line-height: 30px;
+}
+
+.related-post{
+  list-style: none;
+  padding: 35px;
+  background-color: #f0f0f0;
+  border-top: 5px solid #0e819a;
+  border-bottom: 5px solid #0e819a;
+  border-radius: 5px;
+}
+
+.post-item{
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.h2-related-post{
+  margin: auto;
+}
+
+.thesis-img{
+  width: 70px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.post-item .right{
+  display: block;
+}
+
+.post-item .right .top{
+  font-size: 18px;
+  color: #0e819a;
+  text-decoration: none;
+}
+
+.post-item .right .top:hover{
+  text-decoration: underline;
+}
+
+.post-item .right .top,
+.post-item .right .bottom{
+  padding: 2px 0;
+}
+
+.post-item .right .bottom{
+  font-style: italic;
+  color: #333;
+}
+
+aside{
+  position: relative;
+}
+
+footer{
+  grid-column: 1 / -1;
+}
+
+.show-related-post{
+  background-image: url("./img/left-chevron.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50px;
+  left: -35px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.show-navbar{
+  background-image: url("./img/list.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  aside{
+    position: fixed;
+    top: 200px;
+    right: -385px;
+  }
+
+  article{
+    grid-column: 1 / -1;
+  }
+
+  article .header::before{
+    right: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar{
+    display: none;
+  }
+
+  header{
+    position: relative;
+  }
+}
+
+@media (max-width: 500px){
+  .container{
+    padding: 0 5px;
+  }
+
+  article .header::before{
+    display: none;
+  }
+  
+  .h1-article-header{
+    font-size: 30px;
+  }
+}
+
+.navbar-show{
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e819a;
+  z-index: 9999;
+  animation: ani-show-navbar .5s forwards;
+}
+
+.close-navbar-show{
+  background-image: url("./img/close.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.nav-list-facein{
+  list-style: none;
+}
+
+.nav-item-facein{
+  padding: 10px 0;
+  display: flex;
+}
+
+@keyframes ani-show-navbar{
+  0%{
+    width: 0;
+    height: 0;
+  }
+  100%{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.nav-link-facein{
+  font-size: 25px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  flex: 1;
+}
+
+.nav-link-facein:hover{
+  background-color: #fff;
+  color: #0e819a;
+}
